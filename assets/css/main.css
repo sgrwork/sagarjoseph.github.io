@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: "Victor Mono", sans-serif;
+  --ui-primary: #f04545;
+  --ui-secondary: #f37c7c;
+  --ui-accent: #fbfbfe;
+  --ui-text: #454545;
+  --ui-bg: #faf5ee;
+}
+
+@layer components {
+  .text-title-hero {
+    @apply text-[40px] sm:text-[55px] 2xl:text-[80px] leading-[60px] sm:leading-[70px] 2xl:leading-[100px] font-bold;
+  }
+
+  .text-title-page {
+    @apply text-[55px] leading-[70px] font-bold;
+  }
+
+  .text-subtitle {
+    @apply text-xs sm:text-base 2xl:text-xl;
+  }
+
+  .text-heading {
+    @apply text-[40px] leading-[60px] font-bold;
+  }
+
+  .text-subheading {
+    @apply text-[32px] leading-[52px] font-bold;
+  }
+
+  .text-body {
+    @apply text-xs sm:text-base;
+  }
+}
