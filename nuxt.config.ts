@@ -6,9 +6,8 @@ export default defineNuxtConfig({
   modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxt/ui"],
 
   icon: {
-    serverBundle: {
-      remote: "jsdelivr", // 'unpkg' or 'github-raw', or a custom function
-    },
+    provider: "iconify",
+    serverBundle: false,
   },
 
   app: {
