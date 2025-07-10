@@ -7,7 +7,7 @@ const contactLinks = [
   },
   { name: "bluesky", value: "@sgrwork", href: "https://bsky.app/profile/sgrwork.bsky.social" },
   { name: "github", value: "@sgrwork", href: "https://github.com/sgrwork" },
-  { name: "whatsapp", value: "+91 8848675951", href: "tel:+918848675951" },
+  { name: "whatsapp", value: "+91 8848675951", href: "https://wa.me/918848675951" },
 ];
 </script>
 
