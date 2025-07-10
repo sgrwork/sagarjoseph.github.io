@@ -6,26 +6,8 @@ export default defineNuxtConfig({
   modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxt/ui"],
 
   icon: {
-    serverBundle: "remote",
-    clientBundle: {
-      scan: true,
-      includeCustomCollections: true,
-      sizeLimitKb: 256,
-      icons: [
-        "solar:arrow-right-up-broken",
-        "material-symbols-download",
-        "i-lucide-arrow-right",
-        "i-lucide-briefcase",
-        "i-lucide-user",
-        "i-lucide-mail",
-        "i-lucide-menu",
-        "mingcute:home-1-fill",
-        "mingcute:arrow-right-fill",
-        "material-icon-theme:quasar",
-        "material-icon-theme:vue",
-        "material-icon-theme:nodejs",
-        "material-icon-theme:database",
-      ],
+    serverBundle: {
+      remote: "jsdelivr", // 'unpkg' or 'github-raw', or a custom function
     },
   },
 
