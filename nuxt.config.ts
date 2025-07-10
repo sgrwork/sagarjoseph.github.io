@@ -5,6 +5,14 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxt/ui"],
 
+  icon: {
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true,
+      sizeLimitKb: 256,
+    },
+  },
+
   app: {
     head: {
       title: "Sagar Joseph - Full Stack Developer",
