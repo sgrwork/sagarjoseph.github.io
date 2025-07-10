@@ -2,10 +2,6 @@
 const { projects } = useProjects();
 
 const $router = useRouter();
-
-function goTo(path: string) {
-  $router.push(path);
-}
 </script>
 
 <template>
@@ -20,7 +16,7 @@ function goTo(path: string) {
             project.bgColor,
             'lg:min-w-sm max-w-md cursor-pointer transition-shadow hover:shadow-2xl hover:shadow-neutral transform hover:scale-105',
           ]"
-          @click="goTo(`/projects/${project.slug}`)"
+          @click="$router.push(`/projects/${project.slug}`)"
         >
           <template #header> {{ project.id }} </template>
 
