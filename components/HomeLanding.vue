@@ -6,9 +6,9 @@
     </h1>
 
     <p class="my-4 max-w-2xl text-subtitle">
-      <span class="text-secondary font-bold">Fullstack Web Developer</span> with 4 years of
-      experience, dedicated to building clean, reliable systems that simplify complex business
-      operations and empower users across commerce, finance, and logistics.
+      <span class="text-secondary font-bold">Fullstack developer</span> with 4 years of experience
+      delivering scalable intuitive web solutions, that streamline business operations and empower
+      users across commerce, finance, and logistics.
     </p>
 
     <div class="flex flex-row items-center gap-10 mt-8">
