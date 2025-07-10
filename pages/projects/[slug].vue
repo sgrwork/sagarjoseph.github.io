@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { params } = useRoute();
 const { projects } = useProjects();
+const { scrollToHomeSection } = useHomeSectionScroll();
 
 const project = projects.find((p) => p.slug === params.slug);
 
@@ -33,7 +34,9 @@ function onSlideDrag(index: number) {
 
         <p class="text-neutral-600 mb-4">{{ project.client }} | {{ project.years }}</p>
 
-        <h1 class="text-heading sm:text-title-page mb-12 underline underline-offset-20 decoration-secondary">
+        <h1
+          class="text-heading sm:text-title-page mb-12 underline underline-offset-20 decoration-secondary"
+        >
           {{ project.title }}
         </h1>
 
@@ -46,7 +49,13 @@ function onSlideDrag(index: number) {
         <dl class="flex flex-col gap-y-8 sm:gap-y-0 sm:flex-row gap-x-10 my-8">
           <div>
             <dt class="underline font-bold text-sm mb-4">The Team</dt>
-            <dd v-for="(member, index) in project.team" :key="index" :class="{ 'text-primary font-bold': member.includes('My Role') }">{{ member }}</dd>
+            <dd
+              v-for="(member, index) in project.team"
+              :key="index"
+              :class="{ 'text-primary font-bold': member.includes('My Role') }"
+            >
+              {{ member }}
+            </dd>
           </div>
           <div>
             <dt class="underline font-bold text-sm mb-4">Tenure</dt>
@@ -127,7 +136,7 @@ function onSlideDrag(index: number) {
         </div>
 
         <div class="my-12 flex flex-row w-full items-center justify-between">
-          <NuxtLink to="/#projects">
+          <NuxtLink @click="scrollToHomeSection('projects')">
             <UIcon
               name="i-lucide-arrow-left"
               class="text-2xl sm:text-[80px] cursor-pointer transition-shadow hover:shadow-2xl hover:shadow-neutral transform hover:scale-105"
@@ -139,11 +148,15 @@ function onSlideDrag(index: number) {
             :to="`/projects/${nextProject.slug}`"
             class="sm:p-4 sm:rounded-xl underline cursor-pointer underline-offset-20 decoration-secondary group relative overflow-hidden"
           >
-            <p class="text-neutral-600 text-body relative z-10 group-hover:text-accent transition-colors duration-300">
+            <p
+              class="text-neutral-600 text-body relative z-10 group-hover:text-accent transition-colors duration-300"
+            >
               {{ nextProject.id }} / {{ nextProject.client }} - {{ nextProject.title }}
             </p>
             <div class="flex flex-row items-center justify-between">
-              <p class="text-subheading sm:text-title-page font-bold m-12 relative z-10 group-hover:text-accent transition-colors duration-300">
+              <p
+                class="text-subheading sm:text-title-page font-bold m-12 relative z-10 group-hover:text-accent transition-colors duration-300"
+              >
                 {{ nextProject.title }}
               </p>
               <UIcon
